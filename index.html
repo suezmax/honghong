@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123d45"><title>해사법규 · 40문항 연습</title>
+<style>
+:root{--ink:#163c45;--muted:#62777b;--bg:#f4f6f3;--line:#dce5df;--green:#12725e;--red:#b23c35;--gold:#8c631c}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.65}button,a,summary{touch-action:manipulation}button{font:inherit;cursor:pointer}button:disabled{cursor:default}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #dd9b32;outline-offset:4px}a{color:var(--green)}.top{max-width:1220px;margin:auto;padding:24px 32px;display:flex;justify-content:space-between;align-items:center;font-size:13px}.brand{font-weight:800;letter-spacing:.06em;display:flex;gap:10px;align-items:center}.mark{width:30px;height:30px;background:var(--ink);color:white;border-radius:8px;display:grid;place-items:center}.save{color:var(--muted);font-size:12px}.wrap{max-width:1220px;margin:auto;padding:0 32px 64px}.hero{padding:30px 0 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:end;gap:24px}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--green)}h1{font-size:clamp(30px,4vw,46px);margin:6px 0 8px;letter-spacing:-.06em;line-height:1.3}.intro{margin:0;color:var(--muted);font-size:15px}.hero-count{font-size:60px;line-height:1;font-weight:300;letter-spacing:-.06em;white-space:nowrap}.hero-count small{font-size:14px;letter-spacing:0;color:var(--muted);margin-left:8px}.dashboard{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;background:var(--ink);border-radius:14px;padding:20px 6px;color:#fff;margin-bottom:26px}.stat{padding:0 24px;border-right:1px solid #ffffff24}.stat:last-child{border:0}.stat label{display:block;font-size:12px;color:#c1d5d7}.stat strong{font-size:28px;font-weight:650}.stat small{font-size:13px;color:#c1d5d7}.stat.good strong{color:#8de0c0}.stat.bad strong{color:#ffb9a4}.layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:30px;align-items:start}.sidebar{position:sticky;top:20px}.side-panel{background:#fff;padding:20px;border:1px solid var(--line);border-radius:14px}.side-title{font-size:14px;margin:0 0 14px}.numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.num{border:1px solid var(--line);border-radius:7px;background:#f6f8f5;height:32px;font-size:12px;color:var(--ink)}.num.ok{background:#dff4e9;border-color:#a8d7bc;color:#155b46}.num.no{background:#fbe6e0;border-color:#e6b8ad;color:#923f36}.num.pending{border-color:#d2a359;background:#fff8e8}.num.out{opacity:.28}.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:15px}.dot{width:7px;height:7px;display:inline-block;border-radius:50%;margin-right:3px;background:#dce5df}.dot.g{background:#61b58a}.dot.r{background:#d88c79}.tip{font-size:12px;color:var(--muted);padding:0 5px;margin-top:18px}.note-box{margin-top:18px;font-size:12px;color:var(--muted)}summary{cursor:pointer;font-weight:650}.note-box p{margin:8px 0}.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}.btn{border:1px solid var(--line);border-radius:8px;background:#fff;padding:9px 14px;font-size:13px;color:var(--ink);font-weight:650}.btn:hover:not(:disabled){background:#eaf2ec}.btn.active{background:var(--ink);color:white;border-color:var(--ink)}.btn.retry{border-color:#c5d8d0;color:var(--green)}.btn:disabled{opacity:.45}.reset{margin-left:auto;background:transparent;font-weight:400}.mode-line{color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}.progress{height:4px;background:#dee6e0;border-radius:10px;margin-bottom:22px;overflow:hidden}.progress div{height:100%;background:var(--green);transition:width .2s}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px;scroll-margin-top:24px}.card.answered-correct{border-color:#a0cfba}.card.answered-wrong{border-color:#dfb8ae}.card-head{display:flex;align-items:center;gap:10px;font-size:11px;margin-bottom:10px;color:var(--muted)}.qno{font-weight:800;color:var(--green);font-size:13px}.pill{margin-left:auto;padding:2px 9px;border-radius:20px;background:#f2f5f1;color:var(--muted);white-space:nowrap}.pill.good{background:#e2f4e9;color:var(--green)}.pill.bad{background:#fceae5;color:var(--red)}.flag{font-size:10px;color:var(--gold)}h2.question{font-size:17px;line-height:1.8;font-weight:650;margin:0 0 18px;white-space:pre-line;word-break:keep-all;overflow-wrap:anywhere}.options{display:grid;gap:8px}.option{width:100%;text-align:left;padding:12px 14px;display:flex;align-items:baseline;gap:11px;border:1px solid #e1e7e2;border-radius:9px;background:#fff;color:#2d4549;font-size:14px;line-height:1.75}.option:hover:not(:disabled){border-color:#6d9c8d;background:#f0f7f3}.option .choice{flex-shrink:0;display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#f0f3ef;font-size:11px;font-weight:750}.option.correct{border-color:#72b698;background:#eff9f3;color:#145c45}.option.wrong{border-color:#d28d7c;background:#fff1eb;color:#9c3e30}.option .result-tag{font-size:11px;font-weight:750;margin-left:auto;white-space:nowrap;align-self:center}.feedback{margin-top:18px;padding:18px 19px;border-radius:9px;background:#f4f7f3;font-size:14px;line-height:1.85;outline:none}.feedback strong{color:var(--green)}.feedback.is-wrong strong{color:var(--red)}.feedback p{margin:8px 0 0;white-space:pre-line}.memo{padding:12px 14px;background:#fff8e9;border-left:3px solid #ddbc75;margin-top:12px;font-size:12px;color:#74561e}.source-links{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;margin-top:12px}.source-original{font-size:12px;color:var(--muted);margin-top:12px}.replay-one{margin-top:13px;font-size:12px;padding:6px 10px}.round-end{padding:22px;background:#e4f2e9;border-radius:12px;margin-bottom:18px}.round-end h3{margin:0 0 5px;font-size:18px}.round-end p{margin:0;font-size:14px}.footer{font-size:12px;color:var(--muted);padding-top:15px;text-align:center}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#173d45;color:white;border-radius:10px;padding:12px 20px;font-size:13px;box-shadow:0 6px 25px #0002;z-index:10;width:max-content;max-width:90vw}.hide{display:none!important}.top-link{display:block;margin-top:12px;text-align:center;font-size:12px;text-decoration:none}.noscript{padding:30px}
+@media(max-width:800px){.top{padding:18px 20px}.wrap{padding:0 20px 45px}.hero{padding:22px 0}.hero-count{display:none}.layout{grid-template-columns:1fr;gap:20px}.sidebar{position:static}.side-panel{padding:16px}.numbers{grid-template-columns:repeat(10,1fr);gap:5px}.num{height:30px}.side-title{margin-bottom:10px}.tip{margin:12px 0 0}.note-box{margin-top:10px}.card{padding:20px}.stat{padding:0 14px}.dashboard{margin-bottom:20px}.side-panel .legend{margin-top:10px}.question{word-break:normal}}
+@media(max-width:430px){.wrap{padding:0 14px 30px}.top{padding:16px 14px}.brand{font-size:12px}.save{font-size:10px}.stat{padding:0 10px}.stat strong{font-size:24px}.stat label{font-size:10px}.card{padding:17px}.option{padding:11px 10px;font-size:13px}.option .result-tag{font-size:10px}.btn{padding:8px 10px;font-size:12px}.numbers{gap:4px}.num{font-size:11px}h2.question{font-size:16px}.intro{font-size:13px}.flag{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.sidebar,.toolbar,.top,.toast,.replay-one{display:none}.layout{display:block}.card{break-inside:avoid}.wrap{padding:0}.dashboard{color:black;background:white}.stat label,.stat small{color:black}}
+</style>
+</head>
+<body id="top">
+<header class="top"><div class="brand"><span class="mark" aria-hidden="true">⚓</span> MARITIME STUDY</div><span class="save" id="save-status">이 브라우저에 자동 저장</span></header>
+<main class="wrap">
+<section class="hero"><div><div class="eyebrow">해사법규 · 중간고사 연습</div><h1>한 문제씩, 확실하게.</h1><p class="intro">보기를 누르면 바로 채점됩니다. 틀린 문제는 다시 풀며 익혀보세요.</p></div><div class="hero-count">40<small>QUESTIONS</small></div></section>
+<section class="dashboard" aria-label="전체 학습 현황"><div class="stat"><label>현재 답변 수</label><strong id="answered-count">0</strong><small> / 40</small></div><div class="stat good"><label>현재 정답</label><strong id="correct-count">0</strong></div><div class="stat bad"><label>복습할 오답</label><strong id="wrong-count">0</strong></div><div class="stat"><label>현재 정답률</label><strong id="rate">—</strong><small id="rate-unit"></small></div></section>
+<div class="layout"><aside class="sidebar"><nav class="side-panel" aria-label="문제 번호로 이동"><h2 class="side-title">문항 바로가기</h2><div class="numbers" id="numbers"></div><div class="legend"><span><i class="dot"></i>미응답</span><span><i class="dot g"></i>정답</span><span><i class="dot r"></i>오답</span></div></nav><p class="tip">오답 다시 풀기를 누르면 오답의 선택과 해설이 가려집니다. 다시 맞히면 복습 목록에서 빠집니다.</p><details class="note-box"><summary>문제·채점 기준 안내</summary><p>첨부한 40문항과 해설을 바탕으로 구성했습니다. 문제와 보기의 문구는 원문을 유지합니다. 전 문항을 현행 법령에 맞게 개정한 문제집은 아닙니다.</p><p>17번은 정답·해설의 모순을 수정해 ①로 채점합니다. 12·19·23·24·25·31번은 해설에 별도 메모가 있습니다. 수업 및 구법 기준이 포함됩니다.</p><p>풀이 기록은 현재 브라우저에 저장되며 기기 간에는 동기화되지 않습니다. 저장이 차단되어도 현재 화면에서 풀 수 있습니다.</p></details><a class="top-link" href="#top">맨 위로 ↑</a></aside>
+<section aria-label="문제 풀이"><div class="toolbar"><button class="btn active" id="all-btn" type="button">전체 40문항</button><button class="btn retry" id="retry-btn" type="button">오답 다시 풀기</button><button class="btn reset" id="reset-btn" type="button">전체 초기화</button></div><div class="mode-line"><span id="mode-title">전체 문제</span><span id="mode-progress">0 / 40 완료</span></div><div class="progress" role="progressbar" aria-label="현재 풀이 진행률" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0"><div id="progress-fill" style="width:0%"></div></div><div id="round-end" class="round-end hide" aria-live="polite"></div><div id="questions"></div></section></div>
+<footer class="footer">해사법규 40문항 연습 · 선택 → 해설 확인 → 오답 복습</footer>
+<noscript><p class="noscript">문제를 풀려면 브라우저의 JavaScript를 활성화해 주세요.</p></noscript>
+</main><div id="toast" class="toast hide" role="status"></div>
+<script id="question-data" type="application/json">[
+  {
+    "id": 1,
+    "q": "해사법의 분류 중 해사공법 분야에 포함되지 않는 것은?",
+    "options": [
+      "선박법",
+      "선박안전법",
+      "해상법",
+      "해사안전법"
+    ],
+    "answer": 2,
+    "explanation": "해상법은 상법 제5편 해상편으로 해사사법의 분야임",
+    "original": "해상법은 상법 제5편 해상편으로 해사사법의 분야임",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 2,
+    "q": "고대 지중해 연안에서 발달한 해사법으로 후세에 공동해손의 법리를 만드는데 큰 영향을 미친 것은?",
+    "options": [
+      "로오드 해법(Rhodian Sea-Law)",
+      "오레롱 해법(Rules of Orelon)",
+      "꼰솔라또 델 마레(Consolato Del Mare)",
+      "비스비 해법(Sea-Law of Wisby)"
+    ],
+    "answer": 0,
+    "explanation": "교재 4페이지 참조, 오레롱/꼰솔라또 델 마레/비스비는 모두 고대가 아닌 중세의 해사법임",
+    "original": "교재 4페이지 참조, 오레롱/꼰솔라또 델 마레/비스비는 모두 고대가 아닌 중세의 해사법임",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 3,
+    "q": "선박의 국적취득에 있어 오늘날 많은 국가들이 채택하고 있는 태도는?",
+    "options": [
+      "자국 국민의 건조주의",
+      "자국 국민의 승무원주의",
+      "자국 국민의 소유주의",
+      "자국 국민의 소유와 건조주의"
+    ],
+    "answer": 2,
+    "explanation": "소유만 하고 있으면 됨",
+    "original": "소유만 하고 있으면 됨",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 4,
+    "q": "선박의 등기와 등록에 관한 선박법상의 규정 중 잘못 기술된 사항은?",
+    "options": [
+      "선박등기부에 선박의 명칭 등 일정한 사항을 기재하는 것을 선박의 등기라 한다.",
+      "총톤수 20톤 이상 기선의 선박소유자는 그 선박소유권에 관하여 등기를 하여야 한다.",
+      "선박의 등록은 선박의 사법상 권리관계를 공시하는 것이다.",
+      "선박 등록에 관한 변경이 생긴 경우 선박소유자는 그 사실을 안 날로부터 30일 이내에 변경 등록을 해야 한다."
+    ],
+    "answer": 2,
+    "explanation": "등록은 사법이 아닌 공법상 권리관계를 공시, 등기가 사법상 권리관계임",
+    "original": "등록은 사법이 아닌 공법상 권리관계를 공시, 등기가 사법상 권리관계임",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 5,
+    "q": "선박국적증서를 교부받기 위한 전제조건으로 선박에는 개성을 필요로 하는데 여기에 포함되지 않는 것은 어느 것인가?",
+    "options": [
+      "총톤수",
+      "선적항",
+      "선장명",
+      "선박의 명칭"
+    ],
+    "answer": 2,
+    "explanation": "선장명은 필요없음",
+    "original": "선장명은 필요없음",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 6,
+    "q": "국제톤수증서와 관련한 아래 예문의 괄호에 알맞은 단어로 짝지어진 것은 어느 것인가?\n\"국제톤수증서는 (        )의 신청에 의하여 해양수산부장관으로부터 길이 (        )이상의 한국선박에 대해 국제총톤수 및 (        )을/를 기재하여 발급받는 증명서이다.\"",
+    "options": [
+      "선장 - 12m - 재화중량톤수",
+      "선박소유자 - 12m - 순톤수",
+      "선장 - 24m - 재화중량톤수",
+      "선박소유자 - 24m - 순톤수"
+    ],
+    "answer": 3,
+    "explanation": "24m미만은 국제톤수확인서임",
+    "original": "24m미만은 국제톤수확인서임",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 7,
+    "q": "선박법에서 규정한 선박의 의무와 거리가 먼 것은?",
+    "options": [
+      "등기와 등록 의무",
+      "국기게양 의무",
+      "연안 무역 의무",
+      "명칭 등의 표시 의무"
+    ],
+    "answer": 2,
+    "explanation": "연안 무역은 의무가 아니라 특권(권리)임",
+    "original": "연안 무역은 의무가 아니라 특권(권리)임",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 8,
+    "q": "선적항을 필요로 하는 이유와 관계가 먼 것은?",
+    "options": [
+      "선박의 등기와 등록",
+      "관할관청을 정하는 표준",
+      "선박에 대한 행정상 감독의 편의",
+      "선박소유자 확인의 편의"
+    ],
+    "answer": 3,
+    "explanation": "선박소유자 확인과는 무관",
+    "original": "선박소유자 확인과는 무관",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 9,
+    "q": "선박국적증서가 가지는 효력이 아닌 것은?",
+    "options": [
+      "톤수증명",
+      "국적증명",
+      "해기사 자격증명",
+      "항행권 증명"
+    ],
+    "answer": 2,
+    "explanation": "해기사 자격증명과는 무관",
+    "original": "해기사 자격증명과는 무관",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 10,
+    "q": "국제톤수증서를 반환해야 하는 경우로서 틀린 것은?",
+    "options": [
+      "한국 국적을 상실한 때",
+      "국제항해에 종사하지 아니하게 된 때",
+      "선박의 길이가 24m 미만으로 된 때",
+      "선박의 존재여부가 60일간 분명하지 아니하게 된 때"
+    ],
+    "answer": 3,
+    "explanation": "존재여부는 60일이 아닌 90일간 분명하지 아니한 때",
+    "original": "존재여부는 60일이 아닌 90일간 분명하지 아니한 때",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 11,
+    "q": "다음 사항 중 선박법의 내용이 아닌 것은?",
+    "options": [
+      "선박의 국적에 관한 사항 규정",
+      "선박의 톤수측정에 관한 사항 규정",
+      "선박의 안전검사에 관한 사항 규정",
+      "선박등록에 관한 사항 규정"
+    ],
+    "answer": 2,
+    "explanation": "선박의 안전검사는 선박안전법",
+    "original": "선박의 안전검사는 선박안전법",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 12,
+    "q": "신조선의 선박소유자가 선박을 항행에 사용하기 위하여 가장 먼저 취해야 할 조치는?",
+    "options": [
+      "선박국적증서의 교부",
+      "선박의 등기",
+      "선박원부에 등록",
+      "총톤수의 측정"
+    ],
+    "answer": 3,
+    "explanation": "총톤수 측정 → 소유권 등기 → 선박원부 등록 → 선박국적증서 발급 순서로 정리합니다. 가장 먼저 할 조치는 총톤수 측정입니다.",
+    "original": "배부된 프린트물 참조, (4)->(2)->(3)->(1) 순서임. 족보 정답 (3)이 잘못된 것으로 판단됨",
+    "note": "첨부 해설의 수정 의견(④)을 반영했습니다. 기존 족보의 ③과 다릅니다.",
+    "sources": []
+  },
+  {
+    "id": 13,
+    "q": "선박국적증서와 관련한 다음의 내용 중 올바르지 않은 것은?",
+    "options": [
+      "선장은 선박국적증서를 선내에 비치할 의무를 가진다.",
+      "선박국적증서는 그 선박이 한국국적을 갖고 있다고 증명하는 공문서이다.",
+      "관할관청은 선장의 신청에 따라 선박을 선박원부에 등록한 후 선박국적증서를 발급한다.",
+      "원칙적으로 선박국적증서를 비치하여야 국기를 게양할 수 있다."
+    ],
+    "answer": 2,
+    "explanation": "선장이 아닌 선박소유자임",
+    "original": "선장이 아닌 선박소유자임",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 14,
+    "q": "선박법상 선적항을 관할하는 지방해양항만청장에게 말소 등록을 하여야 할 사유가 아닌 것은?",
+    "options": [
+      "선박이 멸실·침몰 또는 해체된 때",
+      "선박이 국제항행에 종사하지 않게 된 때",
+      "선박의 존부가 90일간 분명하지 아니한 때",
+      "선박이 한국 국적을 상실한 때"
+    ],
+    "answer": 1,
+    "explanation": "교재 34p 참조",
+    "original": "교재 34p 참조",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 15,
+    "q": "선박국적증서를 필요로 하지 않는 선박은?",
+    "options": [
+      "국내여객선",
+      "등록어선",
+      "국내화물선",
+      "군함"
+    ],
+    "answer": 3,
+    "explanation": "군함은 선박국적증서가 필요없음",
+    "original": "군함은 선박국적증서가 필요없음",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 16,
+    "q": "선박법상 외국에서 취득한 선박을 외국의 각 항간에서 항행시키는 경우 선박 소유자는 (        )에게 그 선박의 총톤수의 측정을 신청할 수 있다. (        ) 속에 적합한 것은?",
+    "options": [
+      "대한민국 영사",
+      "대한민국 대사",
+      "외교부장관",
+      "해양수산부장관"
+    ],
+    "answer": 0,
+    "explanation": "교재 30p 참조, 신청 자체는 대한민국 영사임(수업때 대사가 아닌 영사라고 말씀하심)",
+    "original": "교재 30p 참조, 신청 자체는 대한민국 영사임(수업때 대사가 아닌 영사라고 말씀하심)",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 17,
+    "q": "다음은 선박법상의 톤수에 관한 내용이다. 옳게 짝지어진 것은?",
+    "options": [
+      "총톤수 : 우리 나라 해사법령의 적용에 있어서 선박의 크기를 나타내기 위하여 사용되는 지표가 된다.",
+      "순톤수 : 폐위장소의 합계 용적을 기초로 하여 선박 전체의 크기를 나타낸다.",
+      "재화중량톤수 : 주로 각종 세금의 부과기준으로 사용된다.",
+      "만재배수톤수 : 항행의 안전을 확보할 수 있는 한도 내의 화물의 최대 적재량을 나타낸다."
+    ],
+    "answer": 0,
+    "explanation": "① 총톤수는 우리나라의 해사 법령 적용에서 선박 크기를 나타내는 지표입니다. ②의 설명은 순톤수와 맞지 않고, ③의 세금·요금 부과기준은 순톤수와 관련됩니다. ④ 만재배수톤수는 만재 상태 선박 전체의 무게입니다. 재화중량톤수는 만재배수톤수에서 경하배수톤수를 뺀 값입니다.",
+    "original": "교재 28-30p 참조, (2) 선박 전체의 크기는 총톤수, 순톤수는 화물용량만 (3) 각종 세금의 부과기준은 순톤수임, (4) 화물의 최대적재량은 재화중량톤수(만재배수톤수-경하배수톤수) / 족보 정답 (4)이 잘못된 것으로 판단됨",
+    "note": "정답 번호 수정: 첨부 파일에는 ④로 적혀 있으나, 같은 파일의 해설은 ④가 틀렸다고 설명합니다. 선박법 제3조에 따라 ①로 채점합니다.",
+    "sources": [
+      [
+        "선박법 제3조",
+        "https://www.law.go.kr/법령/선박법/제3조"
+      ]
+    ]
+  },
+  {
+    "id": 18,
+    "q": "선박법의 선적항에 대한 설명으로 맞지 않는 것은?",
+    "options": [
+      "선적항이란 선박소유자가 선박의 등기 및 등록을 하고 선박국적증서를 교부받는 곳이다.",
+      "선적항은 선박이 항행할 수 있는 수면에 접한 시, 읍, 면으로 정한다.",
+      "선적항은 반드시 그 선박소유자의 주소지에 정한다.",
+      "선적항은 선박의 개성을 나타내는 방법 중의 하나이다."
+    ],
+    "answer": 2,
+    "explanation": "반드시 선박소유자의 주소지는 아님, 예를 들어 대전과 같이 수면에 접하지 않은 주소지는 예외로 인정이 가능함",
+    "original": "반드시 선박소유자의 주소지는 아님, 예를 들어 대전과 같이 수면에 접하지 않은 주소지는 예외로 인정이 가능함",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 19,
+    "q": "다음은 선박법상 등기에 관한 설명이다. 틀린 것은?",
+    "options": [
+      "선박의 등기라 함은 선박의 등기부에 선박의 명칭 등 일정 사항을 기재하여 선적항을 관할하는 지방해양항만청장에게 소유권을 인정받는 것을 말한다.",
+      "선박등기법은 총톤수 20톤 미만의 선박·단주와 노도만으로 운전하는 선박을 제외한 선박에 이를 적용한다.",
+      "선박등기는 선박등기법에 따른다.",
+      "선박의 등기부에는 선종, 명칭, 선적항, 선질, 총톤수, 순톤수를 기재한다."
+    ],
+    "answer": 0,
+    "explanation": "① 등기는 법원이 취급하는 사법상 권리관계의 공시이며, 지방해양항만청장에 대한 행정상 등록과 구별해야 합니다.",
+    "original": "애매한 문제 (1): 지방해양항만청장은 등록이며, 등기는 선적항의 지방법원, (4)에서 순톤수도 필수기재사항은 아님.",
+    "note": "첨부 정답 ①을 적용합니다. 첨부 해설은 ④의 순톤수 기재 여부에도 의문을 표시하고 있으므로 수업 기준을 확인하세요.",
+    "sources": []
+  },
+  {
+    "id": 20,
+    "q": "다음 중 국제톤수증서에 기재되는 톤수는?",
+    "options": [
+      "국제총톤수",
+      "만재배수톤수",
+      "재화중량톤수",
+      "재화용적톤수"
+    ],
+    "answer": 0,
+    "explanation": "국제톤수증서에는 국제총톤수 및 순톤수를 기재함",
+    "original": "국제톤수증서에는 국제총톤수 및 순톤수를 기재함",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 21,
+    "q": "선박법상 한국 선박의 특권이 아닌 것은?",
+    "options": [
+      "국기 게양권",
+      "불개항장 기항권",
+      "연안 무역권",
+      "원양 항해권"
+    ],
+    "answer": 3,
+    "explanation": "원양 항해권은 특권은 아님",
+    "original": "원양 항해권은 특권은 아님",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 22,
+    "q": "선박 톤수 측정에 관한 국제 협약의 시행에 필요한 사항과 관련이 있는 법률은?",
+    "options": [
+      "선박법",
+      "선박안전법",
+      "어선법",
+      "선박직원법"
+    ],
+    "answer": 0,
+    "explanation": "선박법은 1969 선박톤수측정에 관한 국제협약에 시행에 필요한 사항을 기재함",
+    "original": "선박법은 1969 선박톤수측정에 관한 국제협약에 시행에 필요한 사항을 기재함",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 23,
+    "q": "국가필수국제선박으로 지정된 선박이 운송하는 물자와 가장 관련이 없는 것은?",
+    "options": [
+      "군수품",
+      "액화가스",
+      "식료품",
+      "석탄"
+    ],
+    "answer": 2,
+    "explanation": "첨부 정답은 ③입니다. 구 국제선박등록법 시행규칙 제4조는 군수품·양곡·원유·액화가스·석탄·제철 원료를 열거했습니다. 보기에 있는 식료품과 조문의 양곡을 구별하려는 출제 의도로 해석할 수 있습니다. 군수품도 운송 대상이므로 ①을 제외하면 안 됩니다.",
+    "original": "수업때 안하면 안나옴/정답이 조금 애매하긴 함, 국제선박등록법 시행규칙에 따르면 식료품이 아닌 양곡이라고 명시됨",
+    "note": "출제 표현 주의: 양곡도 넓게는 식료품에 속하므로 문항이 엄밀하지 않습니다. ③은 첨부 자료의 학습용 정답입니다. 구법 기준 문항입니다.",
+    "sources": [
+      [
+        "구 국제선박등록법 시행규칙 제4조",
+        "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=190859"
+      ]
+    ]
+  },
+  {
+    "id": 24,
+    "q": "국가필수국제선박의 지정 및 운영에 관한 설명으로 옳지 않은 것은?",
+    "options": [
+      "국가필수국제선박에 외국인 선원의 승선을 제한함으로써 발생하는 임금부담의 손실을 국가와 선박소유자가 공동으로 부담한다.",
+      "비상사태 발생시 국가필수국제선박의 소지명령을 할 수 있다.",
+      "국가필수국제선박의 소유자에 대하여 교육 또는 훈련을 연 1회 이상 실시할 수 있다.",
+      "해양수산부장관은 관계중앙행정기관, 국가필수국제선박의 소유자, 외항운송사업자 등과 국가필수국제선박의 비상시 역할에 대하여 의견을 들을 수 있다."
+    ],
+    "answer": 0,
+    "explanation": "첨부 정답 ①을 적용합니다. 다만 첨부 해설의 “일부 승선이 가능하므로 제한이 아니다”라는 논리는 적절하지 않습니다. 인원 상한을 두는 것도 승선 제한입니다. ①에서는 임금부담 손실을 “국가와 선박소유자가 공동 부담”한다는 부분을 손실보상 규정과 비교해야 합니다.",
+    "original": "수업때 안하면 안나옴/정답이 조금 애매하긴 함, 완전 제한이 아닌 부원 6명 이하임",
+    "note": "해설 확인 필요: 원문 ②의 “소지명령”은 “소집명령”의 오기로 보입니다. 원문 보기는 그대로 보존했습니다. 구법 및 수업 기준 확인이 필요한 문항입니다.",
+    "sources": []
+  },
+  {
+    "id": 25,
+    "q": "국가필수국제선박의 우선지정 대상선박이 아닌 것은?",
+    "options": [
+      "핵폐기물운반선",
+      "유조선",
+      "광탄선",
+      "컨테이너 전용선"
+    ],
+    "answer": 0,
+    "explanation": "첨부 정답은 ① 핵폐기물운반선입니다. 유조선·광탄선·컨테이너 전용선과 달리 우선지정 대상선박으로 제시된 범주에 해당하지 않는다는 취지입니다.",
+    "original": "(1), 수업때 안하면 안나옴/정답이 조금 애매하긴 함",
+    "note": "첨부 자료는 수업에서 다루었는지 확인이 필요하다고 표시했습니다. 구법 기준 문항입니다.",
+    "sources": []
+  },
+  {
+    "id": 26,
+    "q": "선박안전법의 설명으로 관계가 먼 것은?",
+    "options": [
+      "선박의 감항성 유지",
+      "선박의 안전운항에 필요한 사항을 규정",
+      "해상에서의 국민의 생명과 재산의 보호",
+      "해상교통안전에 관한 사항을 규정"
+    ],
+    "answer": 3,
+    "explanation": "해상교통안전은 해상교통안전법에서 규정함",
+    "original": "해상교통안전은 해상교통안전법에서 규정함",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 27,
+    "q": "선박안전법과 가장 관련이 없는 국제협약은?",
+    "options": [
+      "해상인명안전협약(SOLAS)",
+      "국제만재흘수선협약(LOAD LINE)",
+      "해양오염방지협약(MARPOL)",
+      "안전한 컨테이너에 관한 국제협약(CSC)"
+    ],
+    "answer": 2,
+    "explanation": "선박안전법은 선박의 감항성 유지, 안전운항에 중점을 둠. 마폴은 선박의 감항성이 아닌 해양환경과 관련됨",
+    "original": "선박안전법은 선박의 감항성 유지, 안전운항에 중점을 둠. 마폴은 선박의 감항성이 아닌 해양환경과 관련됨",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 28,
+    "q": "선박안전법 적용제외 선박은?",
+    "options": [
+      "추진기관을 가지고 있는 선박에 결합되어 운항하는 압항부선",
+      "선박검사증서를 발급받은 자가 일정기간동안 운항하지 아니할 목적으로 그 증서를 반납한 후 해당 선박을 계류한 경우의 선박",
+      "잠수선 등 특수한 구조로 되어 있는 선박",
+      "기름 또는 폐기물을 산적하여 운송하는 선박"
+    ],
+    "answer": 1,
+    "explanation": "교재 184p 참조, 1,3,4는 예외의 예외이므로 적용대상임",
+    "original": "교재 184p 참조, 1,3,4는 예외의 예외이므로 적용대상임",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 29,
+    "q": "선박안전법상 여객 제외대상자에 해당하지 않는 자는?",
+    "options": [
+      "선장",
+      "운항관리자",
+      "도선사",
+      "1세 이상의 유아"
+    ],
+    "answer": 3,
+    "explanation": "1세 미만의 유아는 제외, 1세 이상은 포함",
+    "original": "1세 미만의 유아는 제외, 1세 이상은 포함",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 30,
+    "q": "화물선인 경우에도 여객선의 설비규정을 적용받게 되는 여객탑승정원의 최저기준은?",
+    "options": [
+      "10인 이상",
+      "13인 이상",
+      "15인 이상",
+      "20인 이상"
+    ],
+    "answer": 1,
+    "explanation": "여객선의 기준 13인 이상 꼭 기억할 것",
+    "original": "여객선의 기준 13인 이상 꼭 기억할 것",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 31,
+    "q": "선박검사에 관한 설명으로 옳지 않은 것은?",
+    "options": [
+      "정기검사 : 최초로 항해에 사용할 때 또는 유효기간이 만료된 때 하는 정밀검사",
+      "중간검사 : 정기검사와 정기검사의 사이에 법령이 정하는 시기에 하는 간이검사",
+      "특별검사 : 선박시설에 대해 개조 또는 수리할 때 특별히 하는 검사",
+      "임시검사 : 항해구역 외의 구역을 항해할 때 하는 검사"
+    ],
+    "answer": 2,
+    "explanation": "③ 선박시설의 개조·수리 시 받는 검사는 임시검사입니다. 특별검사는 대형 해양사고 등과 관련된 별도의 검사입니다.",
+    "original": "교재 187p부터, 선박시설 개조,수리는 특별검사 아닌 임시검사임, (4)도 좀 표현이 애매하긴하나, 임시검사 사유 중 선박검사증서 기재내용 변경시가 있으며, 선박검사증서에 항해구역도 기재하기 때문에 (4)를 맞다고 보는듯. 특히 (3)은 확실히 틀렸음(특별검사는 대형 해양사고 발생 등으로 인해 하는 검사)",
+    "note": "첨부 정답 ③을 적용합니다. ④는 항해구역 변경에 따른 임시검사를 뜻하는 것으로 해석한 답입니다. 임시항해검사와 구별하고 수업 표현을 확인하세요. 교재 187쪽 이후 참조.",
+    "sources": []
+  },
+  {
+    "id": 32,
+    "q": "중간검사를 생략할 수 있는 선박이 아닌 것은?",
+    "options": [
+      "총톤수 2톤 미만의 선박",
+      "추진기관 또는 범장이 설치되지 아니한 선박으로서 연해구역을 운항하는 선박 중 여객운송에 사용되지 아니하는 선박",
+      "추진기관 또는 범장이 설치되지 아니한 선박으로서 평수구역 안에서만 운항하는 선박",
+      "추진기관을 가지고 있는 선박에 결합되어 운항하는 압항부선"
+    ],
+    "answer": 3,
+    "explanation": "압항부선은 중간검사 제외 대상이 아님",
+    "original": "압항부선은 중간검사 제외 대상이 아님",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 33,
+    "q": "검사기준일 전후 3개월 이내에 1종 중간검사를 받아야 하는 선박이 아닌 것은?",
+    "options": [
+      "여객선",
+      "고속선",
+      "유조선",
+      "잠수선"
+    ],
+    "answer": 2,
+    "explanation": "교재 189p 표 참고, 여객선, 고속선, 잠수선은 1종 중간검사 대상.",
+    "original": "교재 189p 표 참고, 여객선, 고속선, 잠수선은 1종 중간검사 대상.",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 34,
+    "q": "임시검사 사유가 아닌 것은?",
+    "options": [
+      "선박의 용도를 변경하는 경우",
+      "선박검사증서의 기재내용 중 선적항을 변경하고자 하는 경우",
+      "만재흘수선을 변경하려는 경우",
+      "승강설비의 정원을 변경하려는 경우"
+    ],
+    "answer": 1,
+    "explanation": "선적항,선박명 등 선박시설 변경이 수반되지 않는 경미한 사항의 변경은 임시검사 대상이 아님",
+    "original": "선적항,선박명 등 선박시설 변경이 수반되지 않는 경미한 사항의 변경은 임시검사 대상이 아님",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 35,
+    "q": "선박안전법상 선박시설에 포함되지 않는 것은?",
+    "options": [
+      "선체",
+      "기관",
+      "돛대",
+      "어로장비"
+    ],
+    "answer": 3,
+    "explanation": "어로장비는 선박시설이 아님",
+    "original": "어로장비는 선박시설이 아님",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 36,
+    "q": "건조검사에 대한 설명으로 옳지 않은 것은?",
+    "options": [
+      "건조검사에 합격한 선박은 선박검사증서에 그 검사결과를 표기한다.",
+      "선박에 설치되는 선박시설에 대한 검사이다.",
+      "선박을 건조하고자 하는 자가 최초로 받는 검사이다.",
+      "외국에서 수입되는 선박으로 건조검사를 받지 아니한 선박은 별도건조검사를 받아야 한다."
+    ],
+    "answer": 0,
+    "explanation": "건조검사에 합격하였으면 선박검사증서가 아닌 건조검사증서에 기재",
+    "original": "건조검사에 합격하였으면 선박검사증서가 아닌 건조검사증서에 기재",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 37,
+    "q": "선박검사증서의 유효기간이 만료되는 때에 당해 선박이 정기검사를 받을 장소에 있지 않은 경우, 증서유효기간을 연장 받을 수 있는 범위는?",
+    "options": [
+      "3월 이내",
+      "4월 이내",
+      "5월 이내",
+      "6월 이내"
+    ],
+    "answer": 0,
+    "explanation": "교재 196페이지 참고, 3개월",
+    "original": "교재 196페이지 참고, 3개월",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 38,
+    "q": "국내의 조선소에서 건조된 외국선박을 시운전하고자 할 때 받는 검사는?",
+    "options": [
+      "임시검사",
+      "임시항해검사",
+      "특별검사",
+      "중간검사"
+    ],
+    "answer": 1,
+    "explanation": "교재 192-193페이지 참조, 임시검사는 선박시설의 개조 수리 등으로 인해 받는 검사. 혼동하면 안됨.",
+    "original": "교재 192-193페이지 참조, 임시검사는 선박시설의 개조 수리 등으로 인해 받는 검사. 혼동하면 안됨.",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 39,
+    "q": "증서의 유효기간으로 옳지 않은 것은?",
+    "options": [
+      "선박검사증서 : 5년",
+      "여객선안전검사증서 : 5년",
+      "화물선안전무선증서 : 5년",
+      "위험물운송적합증서 : 5년"
+    ],
+    "answer": 1,
+    "explanation": "기본적으로는 5년이나, 여객선/원자력은 1년임.",
+    "original": "기본적으로는 5년이나, 여객선/원자력은 1년임.",
+    "note": "",
+    "sources": []
+  },
+  {
+    "id": 40,
+    "q": "선박의 동일성을 식별하기 위한 보조수단은?",
+    "options": [
+      "선박의 재질",
+      "선박번호",
+      "선박의 종류",
+      "선체의 형태"
+    ],
+    "answer": 1,
+    "explanation": "확실하게 동일성 식별을 위한 수단은 선박번호임",
+    "original": "확실하게 동일성 식별을 위한 수단은 선박번호임",
+    "note": "",
+    "sources": []
+  }
+]</script>
+<script>
+'use strict';
+const QUESTIONS=JSON.parse(document.getElementById('question-data').textContent);
+const KEY='maritime-law-40-v1:'+location.pathname;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const blank=()=>({version:1,answers:{},wrong:[],mode:'all',round:[]});
+let state=blank(),canSave=true,toastTimer;
+try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved&&saved.version===1){
+ for(const q of QUESTIONS){const a=saved.answers?.[q.id];if(Number.isInteger(a)&&a>=0&&a<4)state.answers[q.id]=a;}
+ state.wrong=Array.isArray(saved.wrong)?[...new Set(saved.wrong.filter(id=>Number.isInteger(id)&&id>=1&&id<=40))]:[];
+ state.round=Array.isArray(saved.round)?[...new Set(saved.round.filter(id=>Number.isInteger(id)&&id>=1&&id<=40))]:[];
+ state.mode=saved.mode==='retry'&&state.round.length?'retry':'all';
+}}catch{canSave=false;}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));canSave=true;}catch{canSave=false;}saveLabel();}
+function saveLabel(){$('save-status').textContent=canSave?'이 브라우저에 자동 저장':'저장 불가 · 현재 화면에서만 유지';}
+function hasAnswer(q){return Number.isInteger(state.answers[q.id]);}
+function shown(){return state.mode==='all'?QUESTIONS:QUESTIONS.filter(q=>state.round.includes(q.id));}
+function toast(msg){clearTimeout(toastTimer);$('toast').textContent=msg;$('toast').classList.remove('hide');toastTimer=setTimeout(()=>$('toast').classList.add('hide'),3200);}
+function card(q){const a=state.answers[q.id],done=hasAnswer(q),ok=done&&a===q.answer;
+return `<article id="q-${q.id}" class="card ${done?(ok?'answered-correct':'answered-wrong'):''}" aria-labelledby="title-${q.id}"><div class="card-head"><span class="qno">Q${String(q.id).padStart(2,'0')}</span><span>${q.id<=22?'선박법·기초':q.id<=25?'국가필수국제선박':'선박안전·검사'}</span>${q.note?'<span class="flag">확인 메모</span>':''}<span class="pill ${done?(ok?'good':'bad'):''}">${done?(ok?'정답':'오답'):(state.wrong.includes(q.id)?'재도전':'미응답')}</span></div><h2 class="question" id="title-${q.id}">${esc(q.q)}</h2><div class="options" role="group" aria-label="${q.id}번 보기">${q.options.map((o,i)=>`<button type="button" class="option ${done?(i===q.answer?'correct':i===a?'wrong':''):''}" data-id="${q.id}" data-choice="${i}" ${done?'disabled':''}><span class="choice">${i+1}</span><span>${esc(o)}</span>${done&&(i===q.answer||i===a)?`<span class="result-tag">${i===q.answer?(i===a?'내 답 · 정답':'정답'):'내 답 · 오답'}</span>`:''}</button>`).join('')}</div>${done?`<div class="feedback ${ok?'':'is-wrong'}" id="feedback-${q.id}" tabindex="-1"><strong>${ok?'맞았습니다.':'아쉽지만 오답입니다.'} 정답은 ${['①','②','③','④'][q.answer]}입니다.</strong><p>${esc(q.explanation)}</p>${q.note?`<div class="memo">${esc(q.note)}</div>`:''}${q.sources.length?`<div class="source-links">${q.sources.map(([name,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)} ↗</a>`).join('')}</div>`:''}${q.note?`<details class="source-original"><summary>첨부 자료의 원래 해설 보기</summary><p>${esc(q.original)}</p></details>`:''}<button class="btn replay-one" type="button" data-replay="${q.id}">이 문제 다시 풀기 ↻</button></div>`:''}</article>`;
+}
+function updateSummary(){const done=QUESTIONS.filter(hasAnswer),correct=done.filter(q=>state.answers[q.id]===q.answer).length;const list=shown(),n=list.filter(hasAnswer).length;
+$('answered-count').textContent=done.length;$('correct-count').textContent=correct;$('wrong-count').textContent=state.wrong.length;$('rate').textContent=done.length?Math.round(correct/done.length*100):'—';$('rate-unit').textContent=done.length?'%':'';
+$('mode-title').textContent=state.mode==='all'?'전체 문제 · 40문항':`오답 재도전 · ${list.length}문항`;$('mode-progress').textContent=`${n} / ${list.length} 완료`;$('progress-fill').style.width=`${n/list.length*100}%`;
+const bar=document.querySelector('[role="progressbar"]');bar.setAttribute('aria-valuemax',list.length);bar.setAttribute('aria-valuenow',n);
+$('all-btn').classList.toggle('active',state.mode==='all');$('all-btn').setAttribute('aria-pressed',state.mode==='all');$('retry-btn').textContent=`오답 다시 풀기${state.wrong.length?' · '+state.wrong.length:''}`;$('retry-btn').disabled=!state.wrong.length;
+$('numbers').innerHTML=QUESTIONS.map(q=>{const done=hasAnswer(q),status=done?(state.answers[q.id]===q.answer?'ok':'no'):(state.wrong.includes(q.id)?'pending':'');const outside=state.mode==='retry'&&!state.round.includes(q.id);return `<button type="button" class="num ${status} ${outside?'out':''}" data-jump="${q.id}" aria-label="${q.id}번 ${done?(status==='ok'?'정답':'오답'):'미응답'}${outside?', 전체 문제에서 보기':''}">${q.id}</button>`;}).join('');
+const finish=$('round-end');finish.classList.toggle('hide',n!==list.length);if(n===list.length){const c=list.filter(q=>state.answers[q.id]===q.answer).length;finish.innerHTML=`<h3>${state.mode==='retry'?'오답 재도전 완료':'40문항 풀이 완료'}</h3><p>${list.length}문항 중 ${c}문항 정답 · ${state.wrong.length?`복습할 오답이 ${state.wrong.length}문항 남았습니다.`:'복습할 오답이 없습니다. 잘 마무리했습니다!'}</p>`;}
+}
+function render(){$('questions').innerHTML=shown().map(card).join('');updateSummary();saveLabel();}
+$('questions').addEventListener('click',event=>{const btn=event.target.closest('button');if(!btn)return;
+if(btn.dataset.choice!==undefined){const q=QUESTIONS[Number(btn.dataset.id)-1];if(hasAnswer(q))return;const a=Number(btn.dataset.choice);state.answers[q.id]=a;state.wrong=state.wrong.filter(id=>id!==q.id);if(a!==q.answer)state.wrong.push(q.id);state.wrong.sort((a,b)=>a-b);persist();$('q-'+q.id).outerHTML=card(q);updateSummary();$('feedback-'+q.id).focus({preventScroll:true});}
+if(btn.dataset.replay){const id=Number(btn.dataset.replay);delete state.answers[id];persist();$('q-'+id).outerHTML=card(QUESTIONS[id-1]);updateSummary();$('q-'+id).querySelector('.option').focus({preventScroll:true});}
+});
+$('all-btn').addEventListener('click',()=>{state.mode='all';persist();render();});
+$('retry-btn').addEventListener('click',()=>{if(!state.wrong.length)return;state.round=[...state.wrong].sort((a,b)=>a-b);state.mode='retry';for(const id of state.round)delete state.answers[id];persist();render();toast(`${state.round.length}개 오답의 답과 해설을 가렸습니다.`);document.querySelector('.toolbar').scrollIntoView({block:'start'});});
+$('reset-btn').addEventListener('click',()=>{if(!confirm('모든 답변과 오답 기록을 지우고 40문항을 처음부터 풀까요?'))return;state=blank();persist();render();toast('40문항을 처음부터 시작합니다.');window.scrollTo({top:0});});
+$('numbers').addEventListener('click',event=>{const btn=event.target.closest('[data-jump]');if(!btn)return;const id=Number(btn.dataset.jump);if(state.mode==='retry'&&!state.round.includes(id)){state.mode='all';persist();render();}const el=$('q-'+id);el.scrollIntoView({block:'start'});const focus=el.querySelector('.option:not(:disabled)')||el.querySelector('.feedback');focus?.focus({preventScroll:true});});
+render();
+</script>
+</body></html>
